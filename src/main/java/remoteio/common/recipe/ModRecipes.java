@@ -89,8 +89,8 @@ public class ModRecipes {
         RecipeHelper.addOreRecipe(
                 new ItemStack(ModItems.ioTool),
                 " I ",
-                "RSI",
-                "IR ",
+                " S ",
+                "RRR",
                 'I', Items.iron_ingot,
                 'R', Items.redstone,
                 'S', Items.stick
