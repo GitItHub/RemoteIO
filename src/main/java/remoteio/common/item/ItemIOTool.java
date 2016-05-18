@@ -14,11 +14,13 @@ import remoteio.common.lib.ModInfo;
 public class ItemIOTool
 extends Item implements IIOTool {
     public ItemIOTool() {
-        setMaxDamage(0);
+        setMaxDamage(20);
         setMaxStackSize(1);
         setCreativeTab(TabRemoteIO.TAB);
     }
-
+/**
+ * Sneaking will still use the Linker.
+ */
     @Override
     public void registerIcons(IIconRegister register) {
         this.itemIcon = register.registerIcon(ModInfo.RESOURCE_PREFIX + "tool");
@@ -26,6 +28,6 @@ extends Item implements IIOTool {
 
     @Override
     public boolean doesSneakBypassUse(World world, int x, int y, int z, EntityPlayer player) {
-        return true;
+        return false;
     }
 }
